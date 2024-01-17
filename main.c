@@ -4,6 +4,38 @@
 #define MIN_AGE 0
 #define MAJOR 18
 
+void afficher_resultat(int x);
+int calculer_somme(int x, int y);
+int majeur(int age);
+void afficher_age(int age);
+
+
+int max(int x, int y);
+
+int min(int x, int y);
+
+int equals(int x, int y);
+
+
+
+int main()
+{
+    int a = 6;
+    int b = 24;
+
+    afficher_resultat(calculer_somme(5, 10));
+
+    afficher_resultat(calculer_somme(a, b));
+
+    afficher_age(18);
+    afficher_age(17);
+    afficher_age(100);
+    afficher_age(-10);
+}
+
+
+
+
 
 void afficher_resultat(int x)
 {
@@ -32,19 +64,4 @@ void afficher_age(int age)
       printf("%d : mineur\n", age);
     else 
       printf("%d : erreur\n", age);
-}
-
-int main()
-{
-    int a = 6;
-    int b = 24;
-
-    afficher_resultat(calculer_somme(5, 10));
-
-    afficher_resultat(calculer_somme(a, b));
-
-    afficher_age(18);
-    afficher_age(17);
-    afficher_age(100);
-    afficher_age(-10);
 }
