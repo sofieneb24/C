@@ -1,13 +1,50 @@
 #include <stdio.h>
 
+#define MAX_AGE 100
+#define MIN_AGE 0
+#define MAJOR 18
+
+
+void afficher_resultat(int x)
+{
+    printf("le résultat est de : %d\n", x);
+}
+
+int calculer_somme(int x, int y)
+{
+    return x + y;
+}
+
+int majeur(int age) {
+    if(age >=18 && age <= MAX_AGE)
+      return 1;
+    else if(age <= MAJOR && age > MIN_AGE)
+      return 0;
+    else
+      return -1;
+}
+
+void afficher_age(int age)
+{
+    if (majeur(age)==1)
+      printf("%d : majeur\n", age);
+    else if(majeur(age)==0)
+      printf("%d : mineur\n", age);
+    else 
+      printf("%d : erreur\n", age);
+}
+
 int main()
 {
- int num =20;
- int num2 =40;
- float price=10.99;
- printf("Hello World\n");
- printf("%d\n",num);
- printf("%d\n",num2);
- printf("la valeur de num = %d, la valeur de num2= %i\n, prix= %.2f\n", num, num2, price);
- return 0;
+    int a = 6;
+    int b = 24;
+
+    afficher_resultat(calculer_somme(5, 10));
+
+    afficher_resultat(calculer_somme(a, b));
+
+    afficher_age(18);
+    afficher_age(17);
+    afficher_age(100);
+    afficher_age(-10);
 }
